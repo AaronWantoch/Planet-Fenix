@@ -2,15 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public abstract class Health : MonoBehaviour
 {
-    [SerializeField] int health = 100;
+    [SerializeField] protected int health = 100;
 
-    public void DeacreaseHealth(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-            Destroy(this.gameObject);
-        Debug.Log(health);
-    }
+    public abstract void DeacreaseHealth(int damage);
 }

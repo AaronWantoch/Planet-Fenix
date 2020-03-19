@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public void Shoot(object sender, Weapon.ShootingEventArgs args)
+    public void Shoot(object sender, Gun.ShootingEventArgs args)
     {
         RaycastHit hit;
 
@@ -15,7 +15,7 @@ public class Shooting : MonoBehaviour
             args.hit = new RaycastHit();
     }
 
-    public void DealDamage(object sender, Weapon.ShootingEventArgs args)
+    public void DealDamage(object sender, Gun.ShootingEventArgs args)
     {
         Health health;
         if (args.hit.collider != null)
